@@ -58,4 +58,3 @@ app.get('/trigger',async (req, res, next) => {
 app.listen(PORT, () => {
     console.log(`AsthaFess app listening on port ${PORT}`)
 })
-
