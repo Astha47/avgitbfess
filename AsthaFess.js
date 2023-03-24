@@ -3,6 +3,12 @@ const fs = require('fs');
 const { downloadMedia } = require('./download');
 const OAuth  = require('oauth-1.0a');
 const { error, Console } = require('console');
+function sleep(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+}
+
+//Mengambil data admin akun twitter
+
 class AsthaFess {
     constructor(props){
         this.T = new Twit({
@@ -15,7 +21,8 @@ class AsthaFess {
         this.blacklist = props.blacklist;
     }
 
-    sleep = (time) => new Promise(resolve => setTimeout(resolve, time))
+    //sleep = (time) => new Promise(resolve => setTimeout(resolve, time))
+    
 
     //Mengambil data admin akun twitter
     getadminuserinfo = () => {
