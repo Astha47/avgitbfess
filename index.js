@@ -1,7 +1,7 @@
 const express = require('express');
 const CronJob = require('cron').CronJob;
 const app = express();
-
+require('dotenv').config();
 const { AsthaFess } = require('./AsthaFess');
 
 const PORT = 3000;
