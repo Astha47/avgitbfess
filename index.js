@@ -7,10 +7,10 @@ const { AsthaFess } = require('./AsthaFess');
 const PORT = 3000;
 
 const bot = new AsthaFess({
-    consumer_key: 'gjUjLgCMVLuszwXU8XE82ADMp',
-    consumer_secret: 'rBskW2kcFIir60EUolPQ568qo3eYhwrCBW2Wg5mbsQirUbHAtP',
-    access_token: '1324886342862450696-fhBRg6NGGMtlcfbHeZlAaZJqZuGdiR',
-    access_token_secret: 'eN1TrUYZHZcCScggdghyi1qvCXCwO5okfsvP8C9CqGVNP',
+    consumer_key: process.env.CONSUMER_KEY,
+    consumer_secret: process.env.CONSUMER_SECRET,
+    access_token: process.env.ACCESS_TOKEN,
+    access_token_secret: process.env.ACCESS_TOKEN_SECRET,
     triggerword: ['medioker!', 'itb!', 'bucin!', 'help!', 'trade!'],
     blacklist: ['STEI-K','K','Komputasi', 'stei-k', 'stei-komputasi','steik','STEIK']
 })
